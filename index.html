@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card" aria-labelledby="form-title">
+        <h1 id="form-title">Job Application Form.</h1>
+        <p class="lead">Fill required fields and attach your resume (Pdf or Word)</p>
+        <form id="appForm" novalidate>
+            <div class="grid">
+                <div class="input-row">
+                    <label for="fullName"><span aria-hidden="true">*Name:</span></label>
+                    <input type="text" name="fullName" id="fullName" required minlength="2">
+                    <div class="err-hidden" id="err-fullName"></div>
+                </div>
+                <div class="input-row">
+                    <label for="email"><span aria-hidden="true">*Email:</span></label>
+                    <input type="email" name="email" id="email" required >
+                    <div class="err-hidden" id="err-email"></div>
+                </div>
+                <div class="input-row full-width">
+                    <label for="position">Position Applying for.</label>
+                    <select name="position" id="position">
+                        <option value="">Select a Position(Optional)</option>
+                        <option>Frotend Developer</option>
+                        <option>Backend Developer</option>
+                        <option>UX Designer</option>
+                    </select>
+                    <div class="input-row full-width">
+                        <label for="cover">Cover letter (min 20chars)</label>
+                        <textarea name="cover" id="cover" placeholder="Write a short cover note..."></textarea>
+                        <div class="err-hidden" id="err-cover"></div>
+                    </div>
+                    <div class="input-row full-width">
+                        <label for="resume">Resume /CV <span aria-hidden="true">*</span></label>
+                        <div class="file-row">
+                            <input type="file" name="resume" id="resume" aria=-describedby = "resumeHelp" accept=".pdf,.doc,.docx" required>
+                            <button type="button" id="clearFile" class="btn" style="background:#efefef;color: #111;">Clear</button>
+                        </div>
+                        <div class="small" id="resumeHelp">Allowed: .pdf, .doc, .docx — Max size: 2 MB.</div>
+                        <div class="preview hidden" id="filePreview" aria-live="polite"></div>
+                        <div class="err-hidden" id="err-resume"></div>
+                    </div>
+
+                    <div class="input-row full-width">
+                        <label for="portfolio">Portfolio URL (optional)</label>
+                        <input type="text" name="portfolio" id="portfolio" placeholder="https://...">
+                        <div class="err-hidden" id="err-portfolio"></div>
+                    </div>
+
+                    <div class="input-row full-width">
+                        <button type="submit" id="submitBtn" class="btn">Submit application</button>
+                        <span id="formStatus" class="small" style="margin-left: 12px;"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>

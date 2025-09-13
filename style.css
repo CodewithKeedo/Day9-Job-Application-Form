@@ -1,0 +1,115 @@
+:root{
+    --bg:#f6f8fb;
+    --card:#fff;
+    --muted:#6b7280;
+    --danger:#ef4444;
+    --success:#10b981;
+    --accent:#0ea5e9;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+body{
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 100%;
+    max-width: 740px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(16,24,40,.06);
+    padding: 24px;
+}
+h1{
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+p.lead{
+    margin: 0 0 18px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+label{
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+[input = "text"],[input = "email"], select, textarea{
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+}
+textarea{
+    resize: vertical;
+    min-height: 100px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+.file-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+.file-info{
+    font-size:13px;
+    color:var(--muted);
+}
+.btn:disabled{
+    opacity:.6;
+    cursor:not-allowed
+}
+.err-hidden{
+    color:var(--danger);
+    font-size:13px;
+    margin-top:6px;
+}
+.success{
+    color:var(--success);
+    font-size:13px;
+    margin-top:6px;
+}
+.small{
+    font-size:13px;
+    color:var(--muted)
+}
+.full-width{
+    grid-column:1 / -1;
+}
+.input-row{
+    margin-bottom:12px;
+}
+.hidden{
+    display:none;
+}
+.preview{
+      border:1px dashed #e6e9ef;
+      padding:8px;
+      border-radius:8px;
+      background:#fbfdff;
+      font-size:13px;
+      color:var(--muted);
+    }
